@@ -6,6 +6,8 @@
     <content><![CDATA[<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><blockquote>
 <p>排序算法可以分为<code>内部排序</code> 和<code>外部排序</code>，内部排序是数据记录在内存中进行排序，而外部排序是因排序的数据很大，一次不能容纳全部的排序记录，在排序过程中需要访问外存。</p>
 </blockquote>
+<span id="more"></span>
+
 <p>#时间复杂度 #空间复杂度 #稳定性 #适用场景 #内or外部排序</p>
 <h2 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h2><ul>
 <li>定义：能保证两个相等的数，经过排序之后，其在序列的前后位置顺序不变。（A1&#x3D;A2，排序前A1在A2前面，排序后A1还在A2前面）</li>
@@ -20,5 +22,8 @@
       <categories>
         <category>算法</category>
       </categories>
+      <tags>
+        <tag>测试</tag>
+      </tags>
   </entry>
 </search>
