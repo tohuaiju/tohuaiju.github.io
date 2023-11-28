@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>测试博客</title>
-      <link href="/2023/11/24/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/"/>
-      <url>/2023/11/24/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/</url>
-      
-        <content type="html"><![CDATA[<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><blockquote><p>排序算法可以分为<code>内部排序</code> 和<code>外部排序</code>，内部排序是数据记录在内存中进行排序，而外部排序是因排序的数据很大，一次不能容纳全部的排序记录，在排序过程中需要访问外存。</p></blockquote><span id="more"></span><p>#时间复杂度 #空间复杂度 #稳定性 #适用场景 #内or外部排序</p><h2 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h2><ul><li>定义：能保证两个相等的数，经过排序之后，其在序列的前后位置顺序不变。（A1&#x3D;A2，排序前A1在A2前面，排序后A1还在A2前面）</li><li>意义：<mark class="hltr-cyan">稳定性本质是维持具有相同属性的数据的插入顺序</mark>，如果后面需要使用该插入顺序排序，则稳定性排序可以避免这次排序。</li><li>某些情况，尤其符合数据结构的时候，包含多个关键字，那么具有相同关键字的元素会因为排序算法是否稳定而发生变化，如果排序算法稳定，那么仍然按照原有顺序，对于某些应用很重要。</li></ul><h2 id="内or外部排序"><a href="#内or外部排序" class="headerlink" title="内or外部排序"></a>内or外部排序</h2><ul><li>所谓内存（主存）or外存（辅助存储器）的概念，属于计组，简单说就是，16G的运行内存还是1T的固态硬盘。很显然，一个是直接连接到CPU，速度快的临时存储数据，一个是外接，速度一般但长期保存数据。</li><li><mark class="hltr-cyan">内外部排序的区别是能否将所有待排序的元素都放到内存中</mark>。如果能全部放进去，就使用内部排序；如果不能，通常采取多路归并排序算饭去实现，基本思想是将数据分成若干个可以装进内存的块，对每个块进行内部排序，然后在内存中维护一个指向每个块最小元素的指针数组，不断从每个块中选取最小元素进行合并，知道所有元素被合并为止。</li></ul><p>聚类代码</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn.cluster <span class="keyword">import</span> KMeans</span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从Excel文件读取数据</span></span><br><span class="line">df = pd.read_excel(<span class="string">r&#x27;C:\Users\23264\Desktop\聚类特征.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提取特征</span></span><br><span class="line">features = df.drop(<span class="string">&#x27;城市名称&#x27;</span>, axis=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 标准化数据</span></span><br><span class="line">scaler = StandardScaler()</span><br><span class="line">features_standardized = scaler.fit_transform(features)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用K-means聚类算法</span></span><br><span class="line">kmeans = KMeans(n_clusters=<span class="number">3</span>, random_state=<span class="number">42</span>)</span><br><span class="line">df[<span class="string">&#x27;cluster&#x27;</span>] = kmeans.fit_predict(features_standardized) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印每个城市所属的簇</span></span><br><span class="line"><span class="built_in">print</span>(df[[<span class="string">&#x27;城市名称&#x27;</span>, <span class="string">&#x27;cluster&#x27;</span>]])</span><br><span class="line"></span><br><span class="line">df.to_excel(<span class="string">&#x27;聚类.xlsx&#x27;</span>, index=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取每个聚类中心的值</span></span><br><span class="line">cluster_centers = kmeans.cluster_centers_</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印每个特征距离聚类中心的值</span></span><br><span class="line"><span class="keyword">for</span> i, center <span class="keyword">in</span> <span class="built_in">enumerate</span>(cluster_centers):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Cluster <span class="subst">&#123;i+<span class="number">1</span>&#125;</span> center:&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> j, value <span class="keyword">in</span> <span class="built_in">enumerate</span>(center):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;Feature <span class="subst">&#123;j+<span class="number">1</span>&#125;</span>: <span class="subst">&#123;value&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>测试博客</title>
+    <url>/2023/11/24/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><blockquote>
+<p>排序算法可以分为<code>内部排序</code> 和<code>外部排序</code>，内部排序是数据记录在内存中进行排序，而外部排序是因排序的数据很大，一次不能容纳全部的排序记录，在排序过程中需要访问外存。</p>
+</blockquote>
+<span id="more"></span>
+
+<p>#时间复杂度 #空间复杂度 #稳定性 #适用场景 #内or外部排序</p>
+<h2 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h2><ul>
+<li>定义：能保证两个相等的数，经过排序之后，其在序列的前后位置顺序不变。（A1&#x3D;A2，排序前A1在A2前面，排序后A1还在A2前面）</li>
+<li>意义：<mark class="hltr-cyan">稳定性本质是维持具有相同属性的数据的插入顺序</mark>，如果后面需要使用该插入顺序排序，则稳定性排序可以避免这次排序。</li>
+<li>某些情况，尤其符合数据结构的时候，包含多个关键字，那么具有相同关键字的元素会因为排序算法是否稳定而发生变化，如果排序算法稳定，那么仍然按照原有顺序，对于某些应用很重要。</li>
+</ul>
+<h2 id="内or外部排序"><a href="#内or外部排序" class="headerlink" title="内or外部排序"></a>内or外部排序</h2><ul>
+<li>所谓内存（主存）or外存（辅助存储器）的概念，属于计组，简单说就是，16G的运行内存还是1T的固态硬盘。很显然，一个是直接连接到CPU，速度快的临时存储数据，一个是外接，速度一般但长期保存数据。</li>
+<li><mark class="hltr-cyan">内外部排序的区别是能否将所有待排序的元素都放到内存中</mark>。如果能全部放进去，就使用内部排序；如果不能，通常采取多路归并排序算饭去实现，基本思想是将数据分成若干个可以装进内存的块，对每个块进行内部排序，然后在内存中维护一个指向每个块最小元素的指针数组，不断从每个块中选取最小元素进行合并，知道所有元素被合并为止。</li>
+</ul>
+<p>聚类代码</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn.cluster <span class="keyword">import</span> KMeans</span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从Excel文件读取数据</span></span><br><span class="line">df = pd.read_excel(<span class="string">r&#x27;C:\Users\23264\Desktop\聚类特征.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提取特征</span></span><br><span class="line">features = df.drop(<span class="string">&#x27;城市名称&#x27;</span>, axis=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 标准化数据</span></span><br><span class="line">scaler = StandardScaler()</span><br><span class="line">features_standardized = scaler.fit_transform(features)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用K-means聚类算法</span></span><br><span class="line">kmeans = KMeans(n_clusters=<span class="number">3</span>, random_state=<span class="number">42</span>)</span><br><span class="line">df[<span class="string">&#x27;cluster&#x27;</span>] = kmeans.fit_predict(features_standardized) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印每个城市所属的簇</span></span><br><span class="line"><span class="built_in">print</span>(df[[<span class="string">&#x27;城市名称&#x27;</span>, <span class="string">&#x27;cluster&#x27;</span>]])</span><br><span class="line"></span><br><span class="line">df.to_excel(<span class="string">&#x27;聚类.xlsx&#x27;</span>, index=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取每个聚类中心的值</span></span><br><span class="line">cluster_centers = kmeans.cluster_centers_</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印每个特征距离聚类中心的值</span></span><br><span class="line"><span class="keyword">for</span> i, center <span class="keyword">in</span> <span class="built_in">enumerate</span>(cluster_centers):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Cluster <span class="subst">&#123;i+<span class="number">1</span>&#125;</span> center:&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> j, value <span class="keyword">in</span> <span class="built_in">enumerate</span>(center):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;Feature <span class="subst">&#123;j+<span class="number">1</span>&#125;</span>: <span class="subst">&#123;value&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+
+]]></content>
       <categories>
-          
-          <category> 算法 </category>
-          
+        <category>算法</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 测试 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>测试</tag>
+      </tags>
+  </entry>
 </search>
