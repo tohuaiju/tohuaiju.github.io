@@ -1,64 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>测试</title>
-    <url>/2023/11/28/%E6%B5%8B%E8%AF%95-1/</url>
-    <content><![CDATA[<p>测试</p>
-<span id="more"></span>
-<p>11</p>
-<blockquote>
-<p>文章测试</p>
-</blockquote>
-<h2 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h2><ul>
-<li>定义：能保证两个相等的数，经过排序之后，其在序列的前后位置顺序不变。（A1&#x3D;A2，排序前A1在A2前面，排序后A1还在A2前面）</li>
-<li>意义：<mark class="hltr-cyan">稳定性本质是维持具有相同属性的数据的插入顺序</mark>，如果后面需要使用该插入顺序排序，则稳定性排序可以避免这次排序。</li>
-<li>某些情况，尤其符合数据结构的时候，包含多个关键字，那么具有相同关键字的元素会因为排序算法是否稳定而发生变化，如果排序算法稳定，那么仍然按照原有顺序，对于某些应用很重要。</li>
-</ul>
-<h2 id="内or外部排序"><a href="#内or外部排序" class="headerlink" title="内or外部排序"></a>内or外部排序</h2><ul>
-<li>所谓内存（主存）or外存（辅助存储器）的概念，属于计组，简单说就是，16G的运行内存还是1T的固态硬盘。很显然，一个是直接连接到CPU，速度快的临时存储数据，一个是外接，速度一般但长期保存数据。</li>
-<li><mark class="hltr-cyan">内外部排序的区别是能否将所有待排序的元素都放到内存中</mark>。如果能全部放进去，就使用内部排序；如果不能，通常采取多路归并排序算饭去实现，基本思想是将数据分成若干个可以装进内存的块，对每个块进行内部排序，然后在内存中维护一个指向每个块最小元素的指针数组，不断从每个块中选取最小元素进行合并，知道所有元素被合并为止。</li>
-</ul>
-<blockquote>
-<p>特殊提醒标注测试</p>
-</blockquote>
-<div style="background-color: #eafbea; padding: 10px; border-radius: 5px;">
-    <i class="fas fa-lightbulb">&nbsp;提示</i><br>
-    相关的小建议
-</div>
-
-
-
-<p>12</p>
-<div style="background-color: #ADD8E6; padding: 10px;border-radius: 5px;">
-    <i class="fas fa-exclamation-circle">&nbsp;信息</i><br>
-    特殊信息提示
-</div>
-
-
-
-<p>12</p>
-<blockquote>
-<div style="background-color: #ADD8E6; padding: 10px;">
-  <i class="fas fa-exclamation-circle">&nbsp;信息</i><br>
-    特殊信息提示
-</div>
-</blockquote>
-<p>12</p>
-<blockquote>
-<div style="background-color: #ADD8E6; padding: 10px;border-radius: 5px;">
-   <i class="fas fa-exclamation-circle">&nbsp;信息</i><br>
-   特殊信息提示
-</div>
-</blockquote>
-<p>12</p>
-<p>12</p>
-<blockquote>
-<p>代码测试</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; myVector = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">const</span> <span class="keyword">auto</span>&amp; element : myVector)</span><br><span class="line">	cout &lt;&lt; element &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-  </entry>
+<search> 
+  
+  
+    
+    <entry>
+      <title>测试</title>
+      <link href="/2023/11/28/%E6%B5%8B%E8%AF%95-1/"/>
+      <url>/2023/11/28/%E6%B5%8B%E8%AF%95-1/</url>
+      
+        <content type="html"><![CDATA[<p>测试</p><span id="more"></span><p>11</p><blockquote><p>文章测试</p></blockquote><h2 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h2><ul><li>定义：能保证两个相等的数，经过排序之后，其在序列的前后位置顺序不变。（A1&#x3D;A2，排序前A1在A2前面，排序后A1还在A2前面）</li><li>意义：<mark class="hltr-cyan">稳定性本质是维持具有相同属性的数据的插入顺序</mark>，如果后面需要使用该插入顺序排序，则稳定性排序可以避免这次排序。</li><li>某些情况，尤其符合数据结构的时候，包含多个关键字，那么具有相同关键字的元素会因为排序算法是否稳定而发生变化，如果排序算法稳定，那么仍然按照原有顺序，对于某些应用很重要。</li></ul><h2 id="内or外部排序"><a href="#内or外部排序" class="headerlink" title="内or外部排序"></a>内or外部排序</h2><ul><li>所谓内存（主存）or外存（辅助存储器）的概念，属于计组，简单说就是，16G的运行内存还是1T的固态硬盘。很显然，一个是直接连接到CPU，速度快的临时存储数据，一个是外接，速度一般但长期保存数据。</li><li><mark class="hltr-cyan">内外部排序的区别是能否将所有待排序的元素都放到内存中</mark>。如果能全部放进去，就使用内部排序；如果不能，通常采取多路归并排序算饭去实现，基本思想是将数据分成若干个可以装进内存的块，对每个块进行内部排序，然后在内存中维护一个指向每个块最小元素的指针数组，不断从每个块中选取最小元素进行合并，知道所有元素被合并为止。</li></ul><blockquote><p>特殊提醒标注测试</p></blockquote><div style="background-color: #eafbea; padding: 10px; border-radius: 5px;">    <i class="fas fa-lightbulb">&nbsp;提示</i><br>    相关的小建议</div><p>12</p><div style="background-color: #ADD8E6; padding: 10px;border-radius: 5px;">    <i class="fas fa-exclamation-circle">&nbsp;信息</i><br>    特殊信息提示</div><p>12</p><blockquote><div style="background-color: #ADD8E6; padding: 10px;">  <i class="fas fa-exclamation-circle">&nbsp;信息</i><br>    特殊信息提示</div></blockquote><p>12</p><blockquote><div style="background-color: #ADD8E6; padding: 10px;border-radius: 5px;">   <i class="fas fa-exclamation-circle">&nbsp;信息</i><br>   特殊信息提示</div></blockquote><p>12</p><p>12</p><blockquote><p>代码测试</p></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; myVector = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">const</span> <span class="keyword">auto</span>&amp; element : myVector)</span><br><span class="line">cout &lt;&lt; element &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>
