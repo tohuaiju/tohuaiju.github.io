@@ -1,8 +1,5 @@
+http://example.com/2024/03/17/%E8%BF%98%E6%98%AF%E6%B5%8B%E8%AF%95/
 http://example.com/about/index.html
-http://example.com/2024/01/23/sourse/
-http://example.com/2024/01/23/%E2%80%9C%E6%B5%8B%E8%AF%95sourse%E2%80%9D/
-http://example.com/2023/11/28/%E6%B5%8B%E8%AF%95-1/
-http://example.com/logs/index.html
 http://example.com/categories/index.html
 http://example.com/tags/index.html
 http://example.com/
