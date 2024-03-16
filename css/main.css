@@ -310,7 +310,7 @@ dd {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: 0.875em;
+  font-size: 0.85em;
   margin: 0 0 20px;
   width: 100%;
 }
@@ -343,7 +343,7 @@ td {
   border-radius: 0;
   color: var(--btn-default-color);
   display: inline-block;
-  font-size: 0.875em;
+  font-size: 0.85em;
   line-height: 2;
   padding: 0 20px;
   transition: background-color 0.2s ease-in-out;
@@ -706,7 +706,7 @@ pre figcaption {
   background: var(--highlight-gutter-background);
   color: var(--highlight-foreground);
   display: flow-root;
-  font-size: 0.875em;
+  font-size: 0.85em;
   line-height: 1.2;
   padding: 0.5em;
 }
@@ -727,7 +727,7 @@ code {
 }
 code {
   border-radius: 3px;
-  font-size: 0.875em;
+  font-size: 0.85em;
   padding: 2px 4px;
   overflow-wrap: break-word;
 }
@@ -1436,7 +1436,7 @@ pre code {
 }
 .site-description {
   color: #999;
-  font-size: 1em;
+  font-size: 0.9em;
   margin-top: 5px;
 }
 .links-of-author a {
@@ -1468,7 +1468,7 @@ pre code {
   font-size: 0.8125em;
 }
 .links-of-blogroll-title {
-  font-size: 0.875em;
+  font-size: 0.85em;
   font-weight: 600;
 }
 .links-of-blogroll-list {
@@ -1477,7 +1477,7 @@ pre code {
   padding: 0;
 }
 .sidebar-nav {
-  font-size: 0.875em;
+  font-size: 0.85em;
   height: 0;
   margin: 0;
   overflow: hidden;
@@ -1635,7 +1635,7 @@ pre code {
   transform: rotate(-45deg);
 }
 .post-toc {
-  font-size: 0.875em;
+  font-size: 0.85em;
 }
 .post-toc ol {
   list-style: none;
@@ -1697,16 +1697,16 @@ pre code {
 }
 .site-state-item-count {
   display: block;
-  font-size: 1.25em;
+  font-size: 1.1em;
   font-weight: 600;
 }
 .site-state-item-name {
   color: inherit;
-  font-size: 0.875em;
+  font-size: 0.85em;
 }
 .footer {
   color: #999;
-  font-size: 0.875em;
+  font-size: 0.85em;
   padding: 20px 0;
   transition: 0.2s ease-in-out;
   transition-property: left, right;
@@ -1746,7 +1746,7 @@ pre code {
 }
 .languages {
   display: inline-block;
-  font-size: 1.125em;
+  font-size: 1em;
   position: relative;
 }
 .languages .lang-select-label span {
@@ -1884,7 +1884,7 @@ pre code {
   }
 }
 .posts-collapse .post-content .collection-title {
-  font-size: 1.125em;
+  font-size: 1em;
   position: relative;
 }
 .posts-collapse .post-content .collection-title::before {
@@ -1900,7 +1900,7 @@ pre code {
   width: 10px;
 }
 .posts-collapse .post-content .collection-year {
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: bold;
   margin: 60px 0;
   position: relative;
@@ -1976,7 +1976,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .post-body {
-    font-size: 1.125em;
+    font-size: 1em;
   }
 }
 @media (min-width: 992px) {
@@ -2004,7 +2004,7 @@ pre code {
   border-bottom-style: none;
   color: inherit;
   float: right;
-  font-size: 0.875em;
+  font-size: 0.85em;
   margin-left: 10px;
   opacity: 0;
 }
@@ -2053,13 +2053,13 @@ pre code {
   opacity: 1;
 }
 .post-body .exturl .fa {
-  font-size: 0.875em;
+  font-size: 0.85em;
   margin-left: 4px;
 }
 .post-body img + figcaption,
 .post-body .fancybox + figcaption {
   color: #999;
-  font-size: 0.875em;
+  font-size: 0.85em;
   font-weight: bold;
   line-height: 1;
   margin: -15px auto 15px;
@@ -2116,12 +2116,12 @@ pre code {
   margin: 15px 0;
 }
 .posts-expand .post-header {
-  font-size: 1.125em;
+  font-size: 1em;
   margin-bottom: 60px;
   text-align: center;
 }
 .posts-expand .post-title {
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: normal;
   margin: initial;
   overflow-wrap: break-word;
@@ -2147,7 +2147,7 @@ pre code {
   transform: scaleX(1);
 }
 .posts-expand .post-title-link .fa {
-  font-size: 0.875em;
+  font-size: 0.85em;
   margin-left: 5px;
 }
 .post-sticky-flag {
@@ -2162,7 +2162,7 @@ pre code {
   margin-top: 3px;
 }
 .posts-expand .post-meta-container .post-description {
-  font-size: 0.875em;
+  font-size: 0.85em;
   margin-top: 2px;
 }
 .posts-expand .post-meta-container time {
@@ -2206,7 +2206,7 @@ pre code {
 .post-nav-item a {
   border-bottom: 0;
   display: block;
-  font-size: 0.875em;
+  font-size: 0.85em;
   line-height: 1.6;
 }
 .post-nav-item a:active {
@@ -2251,7 +2251,7 @@ pre code {
 }
 .social-like {
   border-top: 1px solid #eee;
-  font-size: 0.875em;
+  font-size: 0.85em;
   margin-top: 1em;
   padding-top: 1em;
   display: flex;
@@ -2937,7 +2937,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #cfffe4;
+  background: #73b09f;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
