@@ -1858,7 +1858,7 @@ pre code {
   margin-top: 40px;
   text-align: left;
 }
-.use-motion .post-block,
+.use-motion .post_block,
 .use-motion .pagination,
 .use-motion .comments {
   visibility: hidden;
@@ -2810,7 +2810,7 @@ header.header {
   display: none;
 }
 .posts-expand .post-block:not(:first-of-type) {
-  margin-top: 120px;
+  margin-top: 30px;
 }
 .posts-expand .post-header {
   margin-bottom: 20px;
@@ -2937,7 +2937,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #73b09f;
+  background: #ba06ed;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
