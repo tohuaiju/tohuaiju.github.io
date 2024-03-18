@@ -25,6 +25,13 @@
 <li>图片测试</li>
 </ul>
 <p><img src="/../image/ob/%E6%A1%8C%E9%9D%A2%E5%A3%81%E7%BA%B8.jpg" alt="图片"></p>
+<ul>
+<li>tupian1</li>
+</ul>
+<center>
+<img src="../image/ob/桌面壁纸.jpg" width="50%">
+Figure 1. xx
+</center>
 ]]></content>
   </entry>
 </search>
