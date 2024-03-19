@@ -1,8 +1,6 @@
+http://example.com/categories/index.html
 http://example.com/2024/03/18/ob/
 http://example.com/about/index.html
 http://example.com/tags/index.html
-http://example.com/categories/index.html
 http://example.com/
-http://example.com/tags/12/
 http://example.com/tags/%E8%80%83%E7%A0%94/
-http://example.com/categories/13/
