@@ -4,12 +4,12 @@
     <title>数据结构绪论</title>
     <url>/2024/03/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA/</url>
     <content><![CDATA[<h3 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h3><blockquote>
-<p>内容有点多，以我自身的思考为主，如果是为了查阅一些基本概念，建议阅读其他优秀的帖子。</p>
+<p>内容有点多，以我自身的思考为主，如果是为了查阅一些基本概念，可以直接跳转到总结。</p>
 <p>小白级的写文，大佬勿怪。如果有任何问题或建议，请通过邮件和我联系。</p>
 </blockquote>
 <p>接触过计算机基础的一定知道一句话，“算法+数据结构&#x3D;程序”，即“Algorithm+Data Structures&#x3D;Programs”，提出者是1984年图灵奖得主、Pascal之父——尼古拉斯·沃斯。</p>
 <div style="width: 80%; margin: 0 auto; text-align: center;">
-    <div style="width: 30%; max-width: 400px; display: inline-block; vertical-align: middle; text-align: center;">
+    <div style="width: 40%; max-width: 160px; display: inline-block; vertical-align: middle; text-align: center;">
         <img src="https://img2.imgtp.com/2024/03/19/36kcq3WK.png" alt="Your Image" style="max-width: 100%; height: auto;">
     </div>
     <div style="width: 40%; max-width: 400px; display: inline-block; vertical-align: middle; text-align: center; padding-left: 20px;">
@@ -54,12 +54,12 @@
 <h4 id="存储结构（物理结构）"><a href="#存储结构（物理结构）" class="headerlink" title="存储结构（物理结构）"></a>存储结构（物理结构）</h4><p>存储结构是指数据结构在计算机中的表示（也叫映像），包括数据元素的表示和关系的表示。</p>
 <p>常见的有顺序，链式，索引及哈希存储。</p>
 <p>……没更完，测试，24.03.20晚上之前更新完成</p>
-<h4 id="数据运算"><a href="#数据运算" class="headerlink" title="数据运算"></a>数据运算</h4><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><div id="refer-anchor-1"></div>
+<h4 id="数据运算"><a href="#数据运算" class="headerlink" title="数据运算"></a>数据运算</h4><h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><h4 id="算法效率的度量"><a href="#算法效率的度量" class="headerlink" title="算法效率的度量"></a>算法效率的度量</h4><h5 id="事前统计"><a href="#事前统计" class="headerlink" title="事前统计"></a>事前统计</h5><h5 id="事后统计"><a href="#事后统计" class="headerlink" title="事后统计"></a>事后统计</h5><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><div id="refer-anchor-1"></div>
 
 <p>[1] Kernighan, Brian W., and Dennis M. Ritchie. (2022). C程序设计语言第二版. 徐宝文，李志 (译). 机械工业出版社, 第一页.</p>
 <div id="refer-anchor-2"></div>
 
-<p>[2] <a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a></p>
+<p>[2] [Wikiped]</p>
 ]]></content>
       <tags>
         <tag>考研</tag>
