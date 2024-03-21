@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://img2.imgtp.com/2024/03/19/36kcq3WK.png">
 <meta property="og:image" content="https://img2.imgtp.com/2024/03/20/HUQtQ8JZ.png">
 <meta property="article:published_time" content="2024-03-18T13:08:46.000Z">
-<meta property="article:modified_time" content="2024-03-20T09:22:03.899Z">
+<meta property="article:modified_time" content="2024-03-21T08:02:14.668Z">
 <meta property="article:author" content="huaiju">
 <meta property="article:tag" content="考研">
 <meta property="article:tag" content="数据结构">
@@ -243,7 +243,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-20 17:22:03" itemprop="dateModified" datetime="2024-03-20T17:22:03+08:00">2024-03-20</time>
+      <time title="修改时间：2024-03-21 16:02:14" itemprop="dateModified" datetime="2024-03-21T16:02:14+08:00">2024-03-21</time>
     </span>
 
   
@@ -259,14 +259,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.6k</span>
+      <span>2.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -281,7 +281,7 @@
 <p>内容有点多，以我自身的思考为主，如果是为了查阅一些基本概念，可以直接跳转到总结。</p>
 <p>小白级的写文，大佬勿怪。如果有任何问题或建议，请通过邮件和我联系。</p>
 </blockquote>
-<p>接触过计算机基础的一定知道一句话，“算法+数据结构&#x3D;程序”，即“Algorithm+Data Structures&#x3D;Programs”，提出者是1984年图灵奖得主、Pascal之父——尼古拉斯·沃斯。</p>
+<p>开始接触数据结构之前，我们先看一个公式：“算法+数据结构&#x3D;程序”，即“Algorithm+Data Structures&#x3D;Programs”，提出者是1984年图灵奖得主、Pascal之父——尼古拉斯·沃斯。</p>
 <div style="width: 80%; margin: 0 auto; text-align: center;">
     <div style="width: 40%; max-width: 160px; display: inline-block; vertical-align: middle; text-align: center;">
         <img src="https://img2.imgtp.com/2024/03/19/36kcq3WK.png" alt="Your Image" style="max-width: 100%; height: auto;">
@@ -299,19 +299,25 @@
 </div>
 <details> <summary>一些小声哔哔</summary>沉睡在长河里的先贤，好像并不会特地因为ta的逝世而难过，但当我们的时间轨迹有所接轨的时候，就别样惆怅了。</details>
 
-<p>我们从这句话展开对数据结构的思考：学习一门新程序设计语言的唯一途径就是使用它编写程序<a href="#refer-anchor-1"><sup>1</sup></a>，而程序是由数据结构和算法组成，那我们是否可以把它们当做两个部分，分别进行耕耘。</p>
-<p>答案毫无疑问是否定的（学习时候，先学基础数据结构，然后学一定算法，呃……不算分开吧）。</p>
-<p>数据结构是算法实现的基础，就如同建筑的基石支撑着整座建筑一样。算法总是依赖于某种数据结构来实现，就像一位厨师需要合适的工具和材料来烹饪美食一样。在发展一种新算法的过程中，往往需要构建适合该算法的数据结构，这就像是为一场舞蹈创作特定的舞台道具一样。</p>
-<p>一种数据结构如果脱离了算法，其实就像是一台停止运转的机器，失去了实用性和意义。实际上，在学习领域里，很少有一本书单纯地只谈论数据结构或者只谈论算法。它们常常被交织在一起，彼此相互依存，相辅相成。</p>
+<p>我们可以从这个公式展开对数据结构的思考：学习一门新程序设计语言的唯一途径就是使用它编写程序<a href="#refer-anchor-1"><sup>1</sup></a>，而程序却是由数据结构和算法组成。我们可以理解为：<strong>学习一门新的程序设计语言就好比是学习如何使用一个新的工具箱，熟悉其中的各种工具（语法和特性），并学会如何使用这些工具来组织数据（数据结构）和完成任务（算法）</strong>。</p>
+<p>我们现在的任务就是<strong>学习如何更好地组织数据</strong>，同时我们也要认识到这种组织是没有所谓最优解的，或说合适就是最好的选择。</p>
+<p>翻开数据结构的课本，我们会发现，还有一些查找，排序的简易算法供我们学习。实际上，在学习领域里，很少有一本书单纯地只谈论数据结构或者只谈论算法。它们常常被交织在一起，彼此相互依存，相辅相成。</p>
+<p>主要是因为：</p>
+<ul>
+<li><p>数据结构是算法实现的基础，就如同建筑的基石支撑着整座建筑一样。算法总是依赖于某种数据结构来实现，就像一位厨师需要合适的工具和材料来烹饪美食一样，毕竟巧妇难为无米之炊。</p>
+</li>
+<li><p>在发展一种新算法的过程中，往往需要构建适合该算法的数据结构，这就像是为一场舞蹈创作特定的舞台道具一样。</p>
+</li>
+<li><p>而一种数据结构如果脱离了算法，其实就像是一台停止运转的机器，失去了实用性和意义。</p>
+</li>
+</ul>
+<p>一个不太切当的比喻，数据结构对于算法，好比语法对于数据结构，是前提，前置条件，当然我们不会提留在这个层面太久，毕竟我们的目的是解决问题，而不是设计繁杂的知识框架供人瞻仰。</p>
 <p>虽然数据结构和算法有一定的区别，但它们的关系密不可分。算法更加抽象，强调对问题的建模和解决方案的设计，就像是指导你如何走舞步的舞谱。而数据结构则更接近实现的层面，关注具体的存储和操作细节，就像是舞台上的舞者在执行具体的舞步动作。</p>
 <p>因此，可以说数据结构是数据之间的有机关系，而算法则是对数据进行操作的步骤。这两个概念之间的逻辑关系贯穿了整个程序世界，就像是一对相互依偎的双胞胎，无法分割。</p>
-<p>所以我们所学的数据结构（只考虑基础数据结构，参考严蔚敏版）往往是前半部分介绍基础数据结构，例如线性表，队列，栈等；后半部分介绍一些简易算法，实现排序，查找等功能，目的也是为了不让所学成为粉墨登场的小丑，贻笑大方罢了。</p>
+<p><strong>总的来说</strong>，虽然课程叫做数据结构，但其实是数据结构+算法，或者直接的说，数据结构就是我们实现任务（算法）的方式罢了。只不过在初期学习阶段，我们必须认真学习其原理，掌握这些基础数据结构，形成我们自己的数据思维，才好完成我们自己的算法。</p>
 <h3 id="数据结构是什么？"><a href="#数据结构是什么？" class="headerlink" title="数据结构是什么？"></a>数据结构是什么？</h3><p>教材对于它的定义是，相互之间存在一种或多种特定关系的数据元素的集合（一门研究非数值计算的程序设计问题中计算机操作对象以及它们之间的关系和操作等的学科）。</p>
-<p>我们通俗的讲：</p>
-<p>想象你有一个大抽屉，里面有各种各样的盒子和文件夹。每个盒子或文件夹都存放着一些东西，可能是衣服、书籍、文件等等。现在，我们来思考这些盒子和文件夹之间的关系，以及如何更有效地组织它们，这就是数据结构的概念。</p>
-<p>数据结构就像是整理抽屉里的东西一样，它告诉我们如何将数据组织起来，以便于存储、查找和处理。比如，有些数据结构就像是一个列表，你可以按顺序排列数据；有些像是树，将数据分层次地组织起来；还有些像是图，可以表示复杂的关系。</p>
-<p>数据结构的设计就像是设计抽屉里放东西的方式一样重要。如果你的抽屉整理得很好，你可以更快地找到需要的东西，同样，如果数据结构设计得好，程序就能更高效地处理数据。</p>
-<p>所以，数据结构就是关于如何组织和管理数据的一门学科，它帮助我们更好地理解和利用计算机中的信息。</p>
+<p>我们通俗的讲，就是组织我们的工具箱，一件件工具合理归置，让我们使用的时候更加方便，效率更高。</p>
+<p>所以，<strong>数据结构就是关于如何组织和管理数据的一门学科，它帮助我们更好地理解和利用计算机中的信息。</strong></p>
 <p>以一般线性表的顺序实现方式（顺序表）为例（不必纠结这个例子，只为了建立理解，从文字到代码）：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    Elemtype data[Maxsize];</span><br><span class="line">    <span class="type">int</span> length;</span><br><span class="line">&#125;Sqlist;</span><br></pre></td></tr></table></figure>
 
@@ -331,14 +337,16 @@
 <p>值得注意的是，逻辑结构和数据存储（存储结构）是没有关系的，是独立于计算机的（在进行数据结构设计时，首先需要考虑数据元素之间的逻辑关系，已确定最合适的数据结构类型，然后再根据具体的存储需求选择合适的存储结构进行实现）。也就是说一种逻辑结构可以由多种数据存储方式实现，而且不分优劣，以适合当前需求为主。</p>
 <center>
     <img src="https://img2.imgtp.com/2024/03/20/HUQtQ8JZ.png">
-    <br>基础数据结构
+    基础数据结构
 </center>
+**逻辑结构就好比，组织工具箱的时候，十字螺丝刀和一字螺丝刀要放一起，顺手；锤子和螺丝刀不一定，没什么必要；一种组织思维的体现。**dfjl**顺序**
 
-<p>在抽屉比喻里，逻辑结构就是指抽屉里物品之间的分类和排列方式。例如，你可以将衣服放在一个抽屉里，书籍放在另一个抽屉里，文件放在另一个抽屉里，这些不同抽屉中的物品之间并没有实际的物理连接，但它们在逻辑上被划分为不同的类别，这就是逻辑结构。</p>
 <h4 id="存储结构（物理结构）"><a href="#存储结构（物理结构）" class="headerlink" title="存储结构（物理结构）"></a>存储结构（物理结构）</h4><p>存储结构是指数据结构在计算机中的表示（也叫映像），包括数据元素的表示和关系的表示。</p>
-<p>常见的有顺序，链式，索引及哈希存储。</p>
-<p>我们再绪论中不纠结这四种方式到底怎么实现</p>
-<p>在抽屉比喻中，存储结构就是指抽屉中物品的实际存放方式。例如，你可以将衣服叠放在抽屉的底部，书籍放在抽屉的中间，文件放在抽屉的顶部，这些物品在抽屉中的具体位置就是存储结构。</p>
+<p>常见的有<strong>顺序</strong>，<strong>链式</strong>，<strong>索引</strong>及<strong>哈希存储</strong>。</p>
+<p>为了能更好解释存储结构的作用，我们提前引入线性表，也就是下一章节的内容，这里只是为了帮助理解。</p>
+<p>简单做个介绍：线性表就是具有相同数据结构的$$n(n\geqslant0)$$个元素的有限序列。线性表的主要实现方式有两种（说主要，说明还有其他，但这个level就足够了，不仅是因为课程要求，还有什么块链式存储，跳表，听名字就知道它们伟岸地让我一个小小的练气境修士无法靠近）：<strong>顺序存储</strong>和<strong>链式存储</strong>。</p>
+<p>&#x3D;&#x3D;这里我想放个图，就是内存中顺序存储和链式存储的区别&#x3D;&#x3D;</p>
+<p><strong>存储结构就好比，组织工具箱的时候，我的各种螺丝刀要放在一起，那是挂在包外面，还是放在包的内层里面，我的摆放方式，那么就需要考虑，在使用工具频率这种前提下，我怎么摆放效率更高（实际应用不一定高效一定好，可能为了成本或说其他原因，我们要找合适的，合适的才是最好的）。</strong></p>
 <h4 id="数据运算"><a href="#数据运算" class="headerlink" title="数据运算"></a>数据运算</h4><h3 id="数据类型与数据结构"><a href="#数据类型与数据结构" class="headerlink" title="数据类型与数据结构"></a>数据类型与数据结构</h3><h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><h4 id="算法效率的度量"><a href="#算法效率的度量" class="headerlink" title="算法效率的度量"></a>算法效率的度量</h4><h5 id="事前统计"><a href="#事前统计" class="headerlink" title="事前统计"></a>事前统计</h5><h5 id="事后统计"><a href="#事后统计" class="headerlink" title="事后统计"></a>事后统计</h5><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><div id="refer-anchor-1"></div>
 
 <p>[1] Kernighan, Brian W., and Dennis M. Ritchie. (2022). C程序设计语言第二版. 徐宝文，李志 (译). 机械工业出版社, 第一页.</p>
@@ -395,7 +403,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
