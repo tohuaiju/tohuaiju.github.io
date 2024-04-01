@@ -1,4 +1,7 @@
+http://example.com/2024/03/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA/
 http://example.com/about/index.html
 http://example.com/categories/index.html
 http://example.com/tags/index.html
 http://example.com/
+http://example.com/tags/%E8%80%83%E7%A0%94/
+http://example.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/
