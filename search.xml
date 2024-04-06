@@ -1,13 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>if __name__ == &quot;__main__&quot;是个啥？</title>
+    <url>/2024/04/02/if%20__name__%20==%20__main__%E6%98%AF%E4%B8%AA%E5%95%A5/</url>
+    <content><![CDATA[<p><code>if __name__ == &quot;__main__&quot;:</code>语句在Python中常用于模块的测试。当一个Python文件作为脚本直接运行时，Python解释器会将模块的<code>__name__</code>属性设置为<code>&quot;__main__&quot;</code>，并执行<code>if __name__ == &quot;__main__&quot;:</code>下的代码块。这意味着只有在作为主程序运行时，下面的代码才会被执行，而当这个文件被导入到其他模块中时，下面的代码不会被执行。</p>
+<p>这种设计使得模块可以被其他模块导入时作为库使用，也可以作为脚本直接运行，方便测试和调试。</p>
+<p>和C中<code>int main()</code>的区别：</p>
+<ol>
+<li><strong>语言类型</strong>：<ul>
+<li><code>if __name__ == &quot;__main__&quot;:</code>是Python语言的一种语法结构，用于判断模块是作为脚本直接运行还是被导入为模块。</li>
+<li><code>int main()</code>是C语言的一种函数定义，它是C程序的入口，程序从<code>main()</code>函数开始执行。</li>
+</ul>
+</li>
+<li><strong>作用</strong>：<ul>
+<li><code>if __name__ == &quot;__main__&quot;:</code>的作用是确定当前文件是否作为主程序运行，并执行相应的代码。</li>
+<li><code>int main()</code>函数的作用是指定C程序的入口，程序从<code>main()</code>函数开始执行。</li>
+</ul>
+</li>
+<li><strong>执行时机</strong>：<ul>
+<li><code>if __name__ == &quot;__main__&quot;:</code>的代码在Python解释器解释执行Python脚本时进行判断，只有当当前文件被作为脚本直接运行时才会执行。</li>
+<li><code>int main()</code>函数是C程序的入口函数，程序从<code>main()</code>函数开始执行，这个函数总是在程序启动时被调用。</li>
+</ul>
+</li>
+<li><strong>语法结构</strong>：<ul>
+<li><code>if __name__ == &quot;__main__&quot;:</code>是Python的一个语法结构，它是一种条件语句，根据条件是否成立来执行相应的代码块。</li>
+<li><code>int main()</code>是C语言的一个函数定义，它定义了程序的入口函数，程序从这个函数开始执行。</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>存储系统（1）</title>
+    <url>/2024/04/01/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F%EF%BC%881%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h3><p>存储系统？内存？那想必是我去年402块买的：1TB，M.2接口，TLC颗粒，600TBW，MVMe读速3000-3999MB&#x2F;S，PCle3.0的致态TiPlus5000吧。啥玩意，这叫辅存啊……</p>
+<div align="center">
+  <img src="https://img2.imgtp.com/2024/04/02/Wn2CYUe3.png" width="50%" alt="致态TiPlus5000">
+</div>
+
+<p>好吧好吧，让我看看小小存储系统是怎么个事。</p>
+<h3 id="存储系统概论"><a href="#存储系统概论" class="headerlink" title="存储系统概论"></a>存储系统概论</h3><p>计算机不同于经典学科的点在于它的发展也就是五十来年，但能给我们日新月异的感觉，包括如今蓬勃发展的AI。所以这里的存储系统（大纲参照白中英计算机组成第六版）也就是我们的主流存储系统，或说消费级存储系统。我很期待二十年或更久之后它们的发展。</p>
+<p>提要：</p>
+<ul>
+<li>在冯·诺依曼体系结构中，存储器是计算机系统的五大组成部件之一。</li>
+<li>从早期单一存储器存放位数不多的数据和指令到现在的多级存储，<strong>存储容量</strong>，<strong>存储速度</strong>和<strong>单位成本</strong>这三个主要性能指标相互制约。</li>
+</ul>
+<h3 id="存储器的分类"><a href="#存储器的分类" class="headerlink" title="存储器的分类"></a>存储器的分类</h3><p>存储器可以从作用，存储介质，存取方式，信息的可保存性等来分类。但我们需要先明白，为什么会这么多类，意义是什么？</p>
+<p>在上面我们提到多级存储中，存储容量，存储速度和单位成本三个主要性能指标相互制约。大概</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>考研</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构绪论</title>
     <url>/2024/03/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA/</url>
-    <content><![CDATA[<h3 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h3><blockquote>
-<p>新课程之所以难以学习，很大程度上是因为这些定义都是先辈千百年来的规定，人定下来的，越是高级的课程，越与生活脱节。幽默风趣的讲课老师受到别人喜欢，也是对于这些定义有自己的，通俗的理解，但我们仍然要记得理解和定义相悖的时候，以定义为准，对那些老师如此，对我这种小白文更如此。</p>
-<p>小白级的写文，大佬勿怪。如果有任何问题或建议，请通过邮件和我联系。</p>
-</blockquote>
-<p>开始接触数据结构之前，我们先看一个公式：“算法+数据结构&#x3D;程序”，即“Algorithm+Data Structures&#x3D;Programs”，提出者是1984年图灵奖得主、Pascal之父——尼古拉斯·沃斯。</p>
+    <content><![CDATA[<h3 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h3><p>开始接触数据结构之前，我们先看一个公式：“算法+数据结构&#x3D;程序”，即“Algorithm+Data Structures&#x3D;Programs”，提出者是1984年图灵奖得主、Pascal之父——尼古拉斯·沃斯。</p>
 <div style="width: 80%; margin: 0 auto; text-align: center;">
     <div style="width: 40%; max-width: 160px; display: inline-block; vertical-align: middle; text-align: center;">
         <img src="https://img2.imgtp.com/2024/03/19/36kcq3WK.png" alt="Your Image" style="max-width: 100%; height: auto;">
@@ -23,7 +80,6 @@
         </div>
     </div>
 </div>
-<details> <summary>一些小声哔哔</summary>沉睡在长河里的先贤，好像并不会特地因为ta的逝世而难过，但当我们的时间轨迹有所接轨的时候，就别样惆怅了。</details>
 
 <p>我们可以从这个公式展开对数据结构的思考：学习一门新程序设计语言的唯一途径就是使用它编写程序<a href="#refer-anchor-1"><sup>1</sup></a>，而程序却是由数据结构和算法组成。我们可以理解为：<strong>学习一门新的程序设计语言就好比是学习如何使用一个新的工具箱，熟悉其中的各种工具（语法和特性），并学会如何使用这些工具来组织数据（数据结构）和完成任务（算法）</strong>。</p>
 <p>我们现在的任务就是<strong>学习如何更好地组织数据</strong>，同时我们也要认识到这种组织是没有所谓最优解的，或说合适就是最好的选择。</p>
@@ -64,13 +120,12 @@
 <center>
     <img src="https://img2.imgtp.com/2024/03/20/HUQtQ8JZ.png">
 </center>
+**逻辑结构就好比，组织工具箱的时候，十字螺丝刀和一字螺丝刀要放一起，顺手；锤子和螺丝刀不一定，没什么必要；一种组织思维的体现**。
 
-
-<p><strong>逻辑结构就好比，组织工具箱的时候，十字螺丝刀和一字螺丝刀要放一起，顺手；锤子和螺丝刀不一定，没什么必要；一种组织思维的体现。</strong></p>
 <h4 id="存储结构（物理结构）"><a href="#存储结构（物理结构）" class="headerlink" title="存储结构（物理结构）"></a>存储结构（物理结构）</h4><p>存储结构是指数据结构在计算机中的表示（也叫映像），包括数据元素的表示和关系的表示。</p>
 <p>常见的有<strong>顺序</strong>，<strong>链式</strong>，<strong>索引</strong>及<strong>哈希存储</strong>。</p>
 <p>为了能更好解释存储结构的作用，我们提前引入线性表，也就是下一章节的内容，这里只是为了帮助理解。</p>
-<p>简单做个介绍：线性表就是具有相同数据结构的$n(n\geqslant0)$个元素的有限序列。线性表的主要实现方式有两种（说主要，说明还有其他，但这个level就足够了，不仅是因为课程要求，还有什么块链式存储，跳表，听名字就知道它们伟岸地让我一个小小的练气境修士无法靠近）：<strong>顺序存储</strong>和<strong>链式存储</strong>。</p>
+<p>简单做个介绍：线性表就是具有相同数据结构的n(n≥0)个元素的有限序列。线性表的主要实现方式有两种（说主要，说明还有其他，但这个level就足够了，不仅是因为课程要求，还有什么块链式存储，跳表，听名字就知道它们伟岸地让我一个小小的练气境修士无法靠近）：<strong>顺序存储</strong>和<strong>链式存储</strong>。</p>
 <p>&#x3D;&#x3D;这里我想放个图，就是内存中顺序存储和链式存储的区别&#x3D;&#x3D;</p>
 <p><strong>存储结构就好比，组织工具箱的时候，我的各种螺丝刀要放在一起，那是挂在包外面，还是放在包的内层里面，我的摆放方式，那么就需要考虑，在使用工具频率这种前提下，我怎么摆放效率更高（实际应用不一定高效一定好，可能为了成本或说其他原因，我们要找合适的，合适的才是最好的）。</strong></p>
 <h4 id="数据运算"><a href="#数据运算" class="headerlink" title="数据运算"></a>数据运算</h4><p>数据运算是指对数据进行操作和处理的过程。</p>
@@ -85,26 +140,55 @@
 <li>分割：将一个数据结构分割成两个或多个较小的数据结构。</li>
 <li>计算：对数据进行各种数学或逻辑运算，例如加减乘</li>
 </ul>
-<p>要是放在我们工具箱里，就是锤子锤钉，螺丝刀拧螺丝。</p>
+<p><strong>要是放在我们工具箱里，就是锤子锤钉，螺丝刀拧螺丝。</strong>    </p>
 <center>
     <img src="https://img2.imgtp.com/2024/03/21/fDwkIPpX.jpg">
-</center>
+</center>   
+### 数据类型与数据结构
 
+<p>不知道刚开始会不会都有点疑惑，但教材也是提了一嘴，所以我们也提一下。</p>
+<p>简单说，数据类型是关于数据的种类或类型的概念，描述的是数据的种类的操作规则；数据结构是关于数据的组织方式的概念，描述了数据的组成方式和相互之间的关系。</p>
+<p><strong>A simple example：</strong></p>
+<p>当你在编程中声明一个变量时，你需要为变量指定数据类型，这样编译器或解释器才知道如何解释和处理这个变量的数据。</p>
+<p>例如，在C中：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> age = <span class="number">21</span></span><br></pre></td></tr></table></figure>
 
+<p>这里的<code>age</code>是一个变量，而<code>int</code>是数据类型，表示整数。这个例子中，<code>age</code>变量的数据类型是整数。</p>
+<p>而数据结构则是关于如何和存储数据的方式。比如，你可以用数组来存储一组整数数据：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">1</span>， <span class="number">2</span>， <span class="number">3</span>， <span class="number">4</span>， <span class="number">5</span>]</span><br></pre></td></tr></table></figure>
 
-<p><strong>换个gif，自己去爬视频做gif有点麻烦，之前代码找不到了</strong></p>
-<h3 id="数据类型与数据结构"><a href="#数据类型与数据结构" class="headerlink" title="数据类型与数据结构"></a>数据类型与数据结构</h3><p>这里要提区别，还有抽象数据类型</p>
-<h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p>这里就想对简单了，概念，重点就有个算法效率度量，其他的也展不开</p>
-<h4 id="算法效率的度量"><a href="#算法效率的度量" class="headerlink" title="算法效率的度量"></a>算法效率的度量</h4><h5 id="事前统计"><a href="#事前统计" class="headerlink" title="事前统计"></a>事前统计</h5><h5 id="事后统计"><a href="#事后统计" class="headerlink" title="事后统计"></a>事后统计</h5><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><div id="refer-anchor-1"></div>
+<p>在这个例子中，numbers是一个数组，它讲一组整数按照排序排列在一起。（数组是一种常见的数据结构，用于存储多个数据项，并且可以通过索引来访问其中的元素。）</p>
+<p>顺便提一下<strong>抽象数据类型</strong>：</p>
+<p>抽象数据类型（Abstract Data Type，简称 ADT）是一种用于描述数据结构和操作的数据类型，它将数据对象、数据对象之间的关系和数据对象的基本操作封装在一起。ADT 可以用于任何需要处理数据和操作数据的地方，它的主要目的是提高代码的可重用性、模块化和抽象化。</p>
+<p>和一般数据类型对比就是，两点不同：</p>
+<ul>
+<li><strong>抽象性</strong>，ADT 是一种更抽象的概念，它定义了一组值以及对这些值执行的操作，而不涉及特定的实现。ADT 主要关注于数据的逻辑表示和行为，而不是具体的实现细节。而数据结构只是一种值的集合，以及在这些值上定义的操作。</li>
+<li><strong>实现性</strong>：ADT 可以用不同的数据结构来实现。例如，栈可以用数组或链表来实现，但栈的 ADT 只关心栈的基本操作（例如压入、弹出），而不关心具体的实现方式。而数据结构通常具有明确的实现方式，例如整数、浮点数、字符串等，它们在计算机中有具体的存储形式和操作实现。</li>
+</ul>
+<h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p>这里就想对简单了，不过当然不是对于算法本身而言。我们这里所接触的算法其实更多的像上面的数据运算，虽然是基础性的，但他山之石可以攻玉，我们不能忽视这一点。</p>
+<p>我们在绪论中只讲一下算法效率的度量，如下。</p>
+<h4 id="算法效率的度量"><a href="#算法效率的度量" class="headerlink" title="算法效率的度量"></a>算法效率的度量</h4><p>度量一般分为<strong>事前统计</strong>和<strong>事后统计</strong>，但可预料的，事后统计，你总得让程序跑起来，还和硬件，语言等一系列有关（或许还沾点玄学），所以那不是我们学习的重点，我们把重心放在事前统计。</p>
+<p>同时这种度量可以分为两个方面：<strong>时间复杂度</strong>和<strong>空间复杂度</strong>。我们都用大O表示法，也就是等阶无穷大的意思，理解可以参考高数里面极限无穷小计算的“找大头”思路有点类似，并且也是“近亲”，而且更简单粗暴：先简单说一下，如果O(2n^2+n) &#x3D; O(n^2)，也就是我们只管最高阶的，并且常数项的倍数我们也是忽略的。虽然我们的代码中，这个n本身可能比前面的常数项倍数都小，但时间复杂度度量里面，n可以理解为∞，区区常数项倍数，洒洒水啦。</p>
+<h5 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h5><p>这里我们只关注算法运行时间是如何根据<strong>数据的输入规模</strong>的大小而变化的。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;n;++i)&#123;</span><br><span class="line">  ++a;</span><br><span class="line">  ++b;</span><br><span class="line">  <span class="keyword">for</span>(j=i;j&lt;n;++j)&#123;</span><br><span class="line">    ++c;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>忘记之前在哪个帖子看到的例子，倒是很合适，我们也只讲这一个。</p>
+<p>时间复杂度中，每一次运算，记作1，而我们只关注随n变化的，在这个例子里面，”++c；“的操作执行次数会是1&#x2F;2 * n * n，”++a；“和”++b;“都是n次，也就是O(1&#x2F;2*n^2 + 2n) &#x3D; O(n^2)。</p>
+<h5 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h5><p>算法在执行时，除了自身指令，输入数据，常数及变量所占空间之外的空间，就是该算法的空间复杂度需要度量的部分，也是随着某个变量n的大小而变化。</p>
+<p>和时间复杂度是一致的，只不过考虑的是所需空间，难点可以在于迭代类的算法</p>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><div id="refer-anchor-1"></div>
 
 <p>[1] Kernighan, Brian W., and Dennis M. Ritchie. (2022). C程序设计语言第二版. 徐宝文，李志 (译). 机械工业出版社, 第一页.</p>
 <div id="refer-anchor-2"></div>
 
-<p>[2] [Wikiped]</p>
+
+
 ]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
       <tags>
         <tag>考研</tag>
-        <tag>数据结构</tag>
       </tags>
   </entry>
 </search>
