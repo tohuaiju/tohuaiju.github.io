@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>存储系统（1）</title>
-    <url>/2024/04/01/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F%EF%BC%881%EF%BC%89/</url>
-    <content><![CDATA[<h3 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h3><p>存储系统？内存？那想必是我去年402块买的：1TB，M.2接口，TLC颗粒，600TBW，MVMe读速3000-3999MB&#x2F;S，PCle3.0的致态TiPlus5000吧。啥玩意，这叫辅存啊……</p>
-<div align="center">
-  <img src="https://img2.imgtp.com/2024/04/02/Wn2CYUe3.png" width="50%" alt="致态TiPlus5000">
-</div>
-
-<p>好吧好吧，让我看看小小存储系统是怎么个事。</p>
-<h3 id="存储系统概论"><a href="#存储系统概论" class="headerlink" title="存储系统概论"></a>存储系统概论</h3><p>计算机不同于经典学科的点在于它的发展也就是五十来年，但能给我们日新月异的感觉，包括如今蓬勃发展的AI。所以这里的存储系统（大纲参照白中英计算机组成第六版）也就是我们的主流存储系统，或说消费级存储系统。我很期待二十年或更久之后它们的发展。</p>
-<p>提要：</p>
-<ul>
-<li>在冯·诺依曼体系结构中，存储器是计算机系统的五大组成部件之一。</li>
-<li>从早期单一存储器存放位数不多的数据和指令到现在的多级存储，<strong>存储容量</strong>，<strong>存储速度</strong>和<strong>单位成本</strong>这三个主要性能指标相互制约。</li>
-</ul>
-<h3 id="存储器的分类"><a href="#存储器的分类" class="headerlink" title="存储器的分类"></a>存储器的分类</h3><p>存储器可以从作用，存储介质，存取方式，信息的可保存性等来分类。但我们需要先明白，为什么会这么多类，意义是什么？</p>
-<p>在上面我们提到多级存储中，存储容量，存储速度和单位成本三个主要性能指标相互制约。大概</p>
-]]></content>
-      <categories>
-        <category>计算机组成原理</category>
-      </categories>
-      <tags>
-        <tag>考研</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>if __name__ == &quot;__main__&quot;是个啥？</title>
     <url>/2024/04/02/if%20__name__%20==%20__main__%E6%98%AF%E4%B8%AA%E5%95%A5/</url>
     <content><![CDATA[<p><code>if __name__ == &quot;__main__&quot;:</code>语句在Python中常用于模块的测试。当一个Python文件作为脚本直接运行时，Python解释器会将模块的<code>__name__</code>属性设置为<code>&quot;__main__&quot;</code>，并执行<code>if __name__ == &quot;__main__&quot;:</code>下的代码块。这意味着只有在作为主程序运行时，下面的代码才会被执行，而当这个文件被导入到其他模块中时，下面的代码不会被执行。</p>
@@ -59,6 +34,31 @@
       </categories>
       <tags>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>存储系统（1）</title>
+    <url>/2024/04/01/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F%EF%BC%881%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h3><p>存储系统？内存？那想必是我去年402块买的：1TB，M.2接口，TLC颗粒，600TBW，MVMe读速3000-3999MB&#x2F;S，PCle3.0的致态TiPlus5000吧。啥玩意，这叫辅存啊……</p>
+<div align="center">
+  <img src="https://img2.imgtp.com/2024/04/02/Wn2CYUe3.png" width="50%" alt="致态TiPlus5000">
+</div>
+
+<p>好吧好吧，让我看看小小存储系统是怎么个事。</p>
+<h3 id="存储系统概论"><a href="#存储系统概论" class="headerlink" title="存储系统概论"></a>存储系统概论</h3><p>计算机不同于经典学科的点在于它的发展也就是五十来年，但能给我们日新月异的感觉，包括如今蓬勃发展的AI。所以这里的存储系统（大纲参照白中英计算机组成第六版）也就是我们的主流存储系统，或说消费级存储系统。我很期待二十年或更久之后它们的发展。</p>
+<p>提要：</p>
+<ul>
+<li>在冯·诺依曼体系结构中，存储器是计算机系统的五大组成部件之一。</li>
+<li>从早期单一存储器存放位数不多的数据和指令到现在的多级存储，<strong>存储容量</strong>，<strong>存储速度</strong>和<strong>单位成本</strong>这三个主要性能指标相互制约。</li>
+</ul>
+<h3 id="存储器的分类"><a href="#存储器的分类" class="headerlink" title="存储器的分类"></a>存储器的分类</h3><p>存储器可以从作用，存储介质，存取方式，信息的可保存性等来分类。但我们需要先明白，为什么会这么多类，意义是什么？</p>
+<p>在上面我们提到多级存储中，存储容量，存储速度和单位成本三个主要性能指标相互制约。大概</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>考研</tag>
       </tags>
   </entry>
   <entry>
